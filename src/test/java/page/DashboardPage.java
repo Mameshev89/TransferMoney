@@ -2,6 +2,7 @@ package page;
 
 import com.codeborne.selenide.SelenideElement;
 import data.DataHelper;
+import lombok.val;
 
 import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Condition.visible;
@@ -19,7 +20,6 @@ public class DashboardPage {
     }
 
     private int extractBalance(String cardInfo) {
-        //Вырезается нужная часть строки:
         var value = cardInfo.substring
                 //Начальная позиция (исключительно) плюс смещение:
                         (cardInfo.indexOf(balanceStart) + balanceStart.length(),
