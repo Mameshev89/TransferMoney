@@ -120,6 +120,7 @@ public class TransferMoneyTest {
     @DisplayName("Transfer money from the first card to the second " +
             "with the transfer amount exceeding the balance of the first card")
     public void shouldTransferFromFirstToSecondNegativeAmount() throws InterruptedException {
+
         //Получение баланса по обеим картам и подготовка данных для перевода денег:
         var dashboardPage = new DashboardPage();
         var firstCardId = DataHelper.getFirstCardId();
